@@ -8,28 +8,23 @@ Execute `npm run dev` e abra `http://127.0.0.1:4173`. Execute `npm run check` pa
 
 ## Conteúdo
 
-`dist/index.html`: página principal. `dist/styles.css`: tokens e apresentação. `dist/app.js`: menu, preferências, newsletter e carregamento opcional do feed. `dist/config.js`: configuração pública dos contatos e endpoints. `dist/privacidade.html`: política correspondente à versão atual.
+`dist/index.html`: página principal. `dist/styles.css`: tokens e apresentação. `dist/app.js`: menu, preferências e incorporação do Instagram. `dist/config.js`: configuração pública dos contatos e perfil do Instagram. `dist/privacidade.html`: política correspondente à versão atual.
 
 As imagens fornecidas foram convertidas para WebP. Retrato: 48 KB em 1100 px e 24 KB em 640 px, aproximadamente. Fontes Lora e Inter são servidas localmente, em WOFF2 com subconjunto latino. Origem: Google Fonts, famílias Lora e Inter; ambas sob SIL Open Font License. As licenças estão em `licenses/`.
 
-## Newsletter (aguardando fornecedor)
+## Instagram — atualização de 06/11/2026
 
-O formulário começa desativado, com aviso visível, conforme escolha do cliente. Para ativar:
+A newsletter e as peças editoriais de demonstração foram removidas a pedido do cliente. A seção `#conteudo` incorpora o perfil real `@caioleonardi.psi` via `https://www.instagram.com/caioleonardi.psi/embed/`, após permissão específica do visitante. O perfil e os posts foram verificados no navegador. Não há cópia local dos posts, scraping, chave de API ou fornecedor pago.
 
-1. Criar um formulário real no Formspree e configurar o destinatário, retenção e gestão de consentimento.
-2. Atualizar a política de privacidade com fornecedor, retenção, eventual transferência internacional e canal de cancelamento.
-3. Preencher `newsletterEndpoint` em `dist/config.js` com o endpoint público `https://formspree.io/f/ID`.
-4. Validar entrega, erros, recebimento do registro de consentimento e cancelamento com o fornecedor. Recomenda-se confirmação de inscrição por e-mail antes de iniciar envios.
+O conteúdo é servido pelo próprio Instagram a cada carregamento. Novas publicações não exigem editar o site; ordem, quantidade de posts, cache, disponibilidade e tempo de atualização dependem do Instagram. Não há promessa de atualização em tempo real. O perfil deve permanecer público e permitir incorporações. Há link direto ao perfil como alternativa quando o embed é bloqueado ou exige login.
 
-O formulário envia nome, e-mail, texto de consentimento e data ao endpoint configurado. Não coloque chaves privadas ou tokens no JavaScript público. Brevo/Mailchimp exigem uma integração de servidor própria, ainda não implementada.
+A preferência `cl-privacy-v2` diferencia `necessary` de `instagram`. A preferência anterior não autoriza a nova integração. O iframe carrega de forma adiada, próximo à seção, somente depois da permissão; a revogação o remove. Validação inclui permitir, reabrir página, recusar/revogar e confirmar ausência de iframe. Não basta o evento load para certificar o conteúdo: o teste visual confirma posts reais.
 
-## Instagram
-
-Sem credenciais fornecidas, quatro peças editoriais levam ao perfil, com aviso de que não constituem o feed real. Não há scraping nem embeds de terceiros. Para usar o feed, configurar um endpoint no mesmo domínio que retorne um array JSON com pelo menos três objetos `{ "title": "Título", "url": "https://www.instagram.com/p/ID/", "image": "/assets/imagem.webp" }`. O servidor precisa obter os dados pela API autorizada; essa parte depende de credenciais e não está implementada. Falha, timeout ou retorno inválido preservam os cards editoriais. Tokens devem ficar exclusivamente no servidor.
+Referência oficial: [Meta Embeds — formatos aceitos, incluindo perfis do Instagram](https://github.com/meta/meta-embeds-for-wordpress#supported-url-formats).
 
 ## Privacidade e publicidade profissional
 
-Registro CRP, nome profissional, nome completo no rodapé e aviso de crise estão presentes. O site usa apenas armazenamento local da preferência de privacidade; não instala analytics ou scripts do Instagram. A implementação não equivale a certificação jurídica ou auditoria integral de conformidade.
+Registro CRP, nome profissional, nome completo no rodapé e aviso de crise estão presentes. O site usa armazenamento local da preferência e só incorpora conteúdo externo do Instagram após permissão; não instala analytics próprio. A implementação não equivale a certificação jurídica ou auditoria integral de conformidade.
 
 Referências consultadas em 06/11/2026: [publicidade profissional — CFP/CRP](https://transparencia.cfp.org.br/crp10/pergunta-frequente/publicidade-profissional/), [LGPD — texto atualizado](https://www2.camara.leg.br/legin/fed/lei/2018/lei-13709-14-agosto-2018-787077-normaatualizada-pl.html).
 

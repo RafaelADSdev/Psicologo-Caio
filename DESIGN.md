@@ -81,7 +81,7 @@ A abertura marinho e o rodapé escuro emolduram áreas brancas e superfícies cl
 **Key Characteristics:**
 - Azul-marinho em grandes campos, branco na abertura e cobalto nas ações sobre fundo claro.
 - Lora para títulos; Inter para leitura e interface.
-- Espaçamento amplo, divisórias finas, etapas verticais e cartões editoriais de grande escala.
+- Espaçamento amplo, divisórias finas, etapas verticais e integração de conteúdo com consentimento.
 - Fotografia autêntica e marca fornecida.
 
 ## Colors
@@ -96,7 +96,7 @@ A paleta é fria e contida, com contraste entre a estrutura escura e os fundos m
 - **Azul de acolhimento** (`secondary`): ênfases em itálico, links textuais, números das etapas e ícones.
 
 ### Neutral
-- **Branco** (`bg-main`): fundo principal, campos e texto sobre botões.
+- **Branco** (`bg-main`): fundo principal, painel de conteúdo e texto sobre botões.
 - **Névoa clara** (`bg-alt`): faixas de conteúdo e ação secundária em hover.
 - **Ardósia escura** (`text-main`): texto principal.
 - **Ardósia suave** (`text-muted`): parágrafos e informação auxiliar.
@@ -115,33 +115,33 @@ A paleta é fria e contida, com contraste entre a estrutura escura e os fundos m
 ### Hierarchy
 - **Display:** papel e valores no frontmatter; no celular o título principal usa (clamp(40px,7vw,52px)), com entrelinha (1.16), e (37px) abaixo de (370px). Na abertura os títulos são brancos, com ênfase em azul-claro.
 - **Headline:** papel e valores no frontmatter; títulos de seção usam (36px) abaixo de (760px), com ajustes por seção.
-- **Title:** títulos de etapas e acordeão usam Lora, (22–24px); cartões editoriais usam (34px) na base e (32px) no celular.
-- **Body:** o estilo global está no frontmatter. A explicação principal usa (16px) de forma consistente na abertura, apresentação, etapas, especialidades, acordeão, abordagem, newsletter e fechamento, inclusive no celular. Metadados, notas e controles mantêm tamanhos menores. A introdução serifada usa (26px) e entrelinha (1.5).
+- **Title:** títulos de etapas e acordeão usam Lora, (22–24px); o painel de permissão usa título serifado de (28px) na base e (26px) no celular.
+- **Body:** o estilo global está no frontmatter. A explicação principal usa (16px) de forma consistente na abertura, apresentação, etapas, especialidades, acordeão, abordagem, introdução do Instagram e fechamento, inclusive no celular. Metadados, notas e controles mantêm tamanhos menores. A introdução serifada usa (26px) e entrelinha (1.5).
 - **Label:** o papel do frontmatter corresponde ao botão principal. A navegação usa (12px); informações auxiliares do site variam entre (10–12px).
 
 ### Named Rules
-**The Two Voices Rule.** Títulos e passagens reflexivas usam Lora; navegação, ações, formulários e metadados usam Inter.
+**The Two Voices Rule.** Títulos e passagens reflexivas usam Lora; navegação, ações e metadados usam Inter.
 
 ## Layout
 
 O contêiner central tem largura máxima de (1200px) e margem lateral total de (96px). Abaixo de (1150px), essa margem total cai para (72px); abaixo de (760px), para (40px). As seções usam espaço vertical de (116px), passando a (85px) abaixo de (940px) e (68px) abaixo de (760px).
 
-A abertura de desktop divide texto e retrato em duas colunas (1.15fr / 1fr), com intervalo de (70px). O campo marinho ocupa toda a largura; o retrato tem altura de (620px) incluindo a área de legenda. Abaixo de (760px), empilha texto e retrato, preservando a chamada antes da imagem. As seções de apresentação e especialidades também passam de duas para uma coluna. As etapas permanecem uma sequência vertical numerada, ao lado da introdução no desktop e abaixo dela no celular. Os cartões editoriais formam duas colunas (1.1fr / 1fr), passando a uma abaixo de (760px). O fechamento divide título e ação no desktop e empilha no celular. O formulário passa a uma coluna no celular.
+A abertura de desktop divide texto e retrato em duas colunas (1.15fr / 1fr), com intervalo de (70px). O campo marinho ocupa toda a largura; o retrato tem altura de (620px) incluindo a área de legenda. Abaixo de (760px), empilha texto e retrato, preservando a chamada antes da imagem. As seções de apresentação e especialidades também passam de duas para uma coluna. As etapas permanecem uma sequência vertical numerada, ao lado da introdução no desktop e abaixo dela no celular. A seção Instagram divide introdução e painel em colunas (.85fr / 1.25fr), com intervalo de (85px); abaixo de (1000px), usa (.85fr / 1.15fr) e intervalo de (45px). Abaixo de (760px), empilha introdução e painel com intervalo de (26px). O fechamento divide título e ação no desktop e empilha no celular.
 
 O cabeçalho fixo ao rolar tem altura de (94px), reduzida a (78px) no celular. A navegação se recolhe em menu abaixo de (760px); a ação lateral do cabeçalho desaparece abaixo de (940px).
 
 ## Elevation & Depth
 
-A base é plana: alternância tonal, divisórias finas e fotografia criam hierarquia. Sombras suaves aparecem nos botões e cartões em hover, no menu móvel e nos controles flutuantes. Não há sombras duras deslocadas. Os valores exatos dessas exceções ficam no sidecar.
+A base é plana: alternância tonal, divisórias finas e fotografia criam hierarquia. Sombras suaves aparecem nos botões em hover, no menu móvel e nos controles flutuantes. Não há sombras duras deslocadas. Os valores exatos dessas exceções ficam no sidecar.
 
 ### Named Rules
 **The Quiet Surface Rule.** Conteúdo institucional permanece plano; sombra suave serve à interação ou à separação de controles sobrepostos.
 
 ## Shapes
 
-Botões e cartões compartilham cantos suavizados, definidos por `rounded.surface`; campos e botão do menu usam `rounded.control`. Contornos são finos, geralmente (1px). O retrato tem cantos superiores arredondados e uma legenda branca na base, com nome marinho. Linhas finas deslocadas junto à foto sugerem enquadramento editorial. O botão flutuante de WhatsApp é circular.
+Botões e painel do Instagram compartilham cantos suavizados, definidos por `rounded.surface`; o botão do menu usa `rounded.control`. Contornos são finos, geralmente (1px). O retrato tem cantos superiores arredondados e uma legenda branca na base, com nome marinho. Linhas finas deslocadas junto à foto sugerem enquadramento editorial. O botão flutuante de WhatsApp é circular.
 
-A faixa de abordagem usa um desenho SVG de linhas curvas entrelaçadas, junto à citação serifada. Os cartões editoriais usam grandes sinais tipográficos e uma seta SVG como marcas gráficas; esses motivos permanecem locais.
+A faixa de abordagem usa um desenho SVG de linhas curvas entrelaçadas, junto à citação serifada. O desenho permanece um motivo local da abordagem.
 
 ## Components
 
@@ -154,13 +154,13 @@ Ações sólidas e compactas, com texto semibold e ícones SVG lineares.
 - **Hover / Focus:** transições de fundo e sombra em (.2s). Foco visível com contorno azul luminoso de (3px), afastado (5px).
 - **Reduced motion:** a preferência de movimento reduzido desativa transições, animação e rolagem suave. Sem essa preferência, o retrato entra em (.8s), com deslocamento vertical de (10px) e mudança sutil de luminosidade.
 
-### Cards / Containers
+### Conteúdo do Instagram
 
-Cartões editoriais têm cantos suaves, altura mínima de (295px), preenchimento de (29px 32px), títulos grandes e linha de destino ancorada na base. No celular usam altura mínima de (250px). O conjunto alterna marinho e fundos discretos frios e quentes, sem constituir uma paleta institucional adicional. Os demais conteúdos se organizam com linhas e espaço, sem adotar o cartão como invólucro padrão.
+O painel incorpora o perfil nativo de `@caioleonardi.psi`, com borda fria fina, cantos de superfície e recorte do conteúdo. A tipografia e o conteúdo dentro do iframe pertencem ao Instagram e não definem os tokens locais.
 
-### Inputs / Fields
+Antes da autorização, uma superfície clara apresenta ícone SVG, título Lora, explicação, botão de permissão e link direto alternativo. O painel de permissão tem altura mínima de (470px), preenchimento de (42px 32px), texto de (13px) e botão com altura mínima de (52px). No celular, usa altura mínima de (450px) e preenchimento de (32px 22px). A altura do iframe é específica da integração e deve acompanhar o CSS entregue, sem virar um token de contêiner.
 
-Campos brancos com contorno frio, raio de controle e rótulos acima. Usam preenchimento (13px), altura mínima (51px) e texto (12px). O foco segue o contorno global. O estado entregue da newsletter é desabilitado: fundo dos campos acinzentado, botão azul acinzentado e mensagem explícita de indisponibilidade. Essa condição é de integração, não um padrão para futuros formulários ativos.
+O iframe só é criado após a escolha explícita de permitir Instagram; com permissão lembrada, aguarda a proximidade da seção para carregar. A escolha de somente necessários mantém a apresentação de permissão. As preferências podem ser reabertas no rodapé. Um link abaixo do painel permite abrir o perfil quando a incorporação não aparece. A decisão salva usa a versão atual de preferências; não representa uma autorização genérica a outras integrações.
 
 ### Navigation
 
@@ -176,7 +176,7 @@ Elementos nativos `details` e `summary`, separados por divisórias. O título se
 
 ### Exceções locais aprovadas
 
-O selo de atendimento online acima do título é exigido pelo usuário e permanece uma exceção da abertura, sem virar uma regra de sobrancelhas para novas seções. O verde reconhecível do WhatsApp pertence apenas ao controle flutuante de contato. A newsletter fica indisponível e os quatro links editoriais indicam conteúdos temáticos, sem simular um feed integrado.
+O selo de atendimento online acima do título é exigido pelo usuário e permanece uma exceção da abertura, sem virar uma regra de sobrancelhas para novas seções. O verde reconhecível do WhatsApp pertence apenas ao controle flutuante de contato. O painel do Instagram mantém sua permissão e alternativa de acesso visíveis; a newsletter e os antigos cartões editoriais foram removidos.
 
 ## Do's and Don'ts
 
@@ -185,12 +185,12 @@ O selo de atendimento online acima do título é exigido pelo usuário e permane
 - **Do** usar marinho para estrutura, ação branca na abertura e cobalto para ações sobre fundos claros.
 - **Do** manter títulos em Lora e interface em Inter.
 - **Do** preservar o foco visível e a preferência de movimento reduzido.
-- **Do** identificar estados indisponíveis e conteúdos editoriais de forma explícita.
+- **Do** apresentar a permissão do Instagram antes de carregar conteúdo externo e manter o link direto alternativo.
 
 ### Don't:
 - **Don't** transformar o selo obrigatório da abertura em um padrão de sobrancelhas para novas seções.
-- **Don't** usar os tons pontuais dos cartões ou o verde do WhatsApp como novas cores institucionais.
+- **Don't** usar o verde do WhatsApp como nova cor institucional.
 - **Don't** documentar textos auxiliares muito pequenos como uma escala recomendada para novas telas.
-- **Don't** sugerir inscrições funcionais ou publicações importadas quando essas integrações não existem.
+- **Don't** simular publicações com cartões locais ou apresentar a incorporação como conteúdo controlado pelo site.
 
 Não canonizado: o sinal tipográfico de expansão do acordeão e os metadados locais de (8–10px) presentes em regras locais não são modelos para novos componentes; o primeiro deve ceder a um ícone SVG em trabalhos futuros e os segundos exigem avaliação de legibilidade. O selo obrigatório permanece apenas uma exceção aprovada pelo usuário.

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-06T23:35:32.353240+00:00",
+  "generatedAt": "2026-11-06T23:46:54.083609+00:00",
   "title": "Design System: Caio Leonardi",
   "extensions": {
     "colorMeta": {
@@ -152,11 +152,6 @@
         "purpose": "Hover de botões."
       },
       {
-        "name": "card-hover",
-        "value": "0 8px 28px #0b25451a",
-        "purpose": "Hover editorial."
-      },
-      {
         "name": "floating-contact",
         "value": "0 5px 20px #0b25452a",
         "purpose": "Contato flutuante."
@@ -209,6 +204,10 @@
       {
         "name": "small-mobile",
         "value": "370px"
+      },
+      {
+        "name": "instagram-compact",
+        "value": "1000px"
       }
     ],
     "typographyMeta": {
@@ -240,25 +239,11 @@
       "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:58px;padding:16px 24px;border:1px solid transparent;border-radius:8px;font:600 13px/1.5 var(--sans);background:var(--color-accent);color:white;cursor:pointer;transition:background .2s,box-shadow .2s}.ds-button:hover{background:var(--color-accent-hover);box-shadow:0 6px 18px #0b25451c}.ds-button:focus-visible{outline:3px solid #527DFA;outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-outline{background:white;color:var(--color-primary);border-color:var(--color-border)}.ds-outline:hover{background:var(--color-bg-alt)}"
     },
     {
-      "name": "Text Field",
-      "kind": "input",
-      "description": "Campo de formulário com rótulo explícito.",
-      "html": "<label class=\"ds-label\">Seu nome<input class=\"ds-input\" placeholder=\"Como podemos chamar você?\"></label>",
-      "css": ".ds-label{font:600 11px var(--sans)}.ds-input{display:block;padding:13px;margin-top:7px;min-height:51px;border:1px solid #bdcbd9;border-radius:6px;background:white;color:var(--color-text-main);font:12px var(--sans)}.ds-input::placeholder{color:var(--color-text-muted);opacity:1}.ds-input:focus-visible{outline:3px solid #527DFA;outline-offset:5px}.ds-input:disabled{background:#f0f3f7;color:var(--color-text-muted)}"
-    },
-    {
       "name": "Navigation",
       "kind": "nav",
       "description": "Links sóbrios com resposta de cor.",
       "html": "<nav class=\"ds-nav\"><a href=\"#sobre\">Sobre mim</a><a href=\"#atendimento\">Atendimento</a></nav>",
       "css": ".ds-nav{display:flex;gap:26px}.ds-nav a{font:12px var(--sans);color:var(--color-text-main);text-decoration:none;white-space:nowrap}.ds-nav a:hover{color:var(--color-accent)}.ds-nav a:focus-visible{outline:3px solid #527DFA;outline-offset:5px}"
-    },
-    {
-      "name": "Editorial Card",
-      "kind": "card",
-      "description": "Cartão editorial de tema, sem alegar publicação integrada.",
-      "html": "<a class=\"ds-card\" href=\"#instagram\"><h3>Há espaço para novos sentidos.</h3><span>Explore no Instagram</span></a>",
-      "css": ".ds-card{display:flex;flex-direction:column;justify-content:end;max-width:500px;min-height:295px;padding:29px 32px;background:#edf2f7;border-radius:8px;text-decoration:none;color:var(--color-primary);transition:box-shadow .2s}.ds-card h3{font:400 34px/1.28 var(--serif);letter-spacing:-.02em;margin:65px 0 24px}.ds-card span{font:11px var(--sans);border-top:1px solid #0b254527;padding-top:12px}.ds-card:hover{box-shadow:0 8px 28px #0b25451a}.ds-card:focus-visible{outline:3px solid #527DFA;outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-card{transition:none}}"
     },
     {
       "name": "Hero Button",
@@ -275,6 +260,13 @@
       "description": "Ação contornada do cabeçalho.",
       "html": "<button class=\"ds-button ds-nav-cta\">Agendar consulta</button>",
       "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:58px;padding:16px 24px;border:1px solid transparent;border-radius:8px;font:600 13px/1.5 var(--sans);background:var(--color-accent);color:white;cursor:pointer;transition:background .2s,box-shadow .2s}.ds-button:hover{background:var(--color-accent-hover);box-shadow:0 6px 18px #0b25451c}.ds-button:focus-visible{outline:3px solid #527DFA;outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-nav-cta{min-height:43px;padding:11px 17px;font-size:11px;background:transparent;color:var(--color-primary);border-color:#b9c6d6}.ds-nav-cta:hover{background:var(--color-primary);color:white}"
+    },
+    {
+      "name": "Instagram Permission",
+      "kind": "custom",
+      "description": "Estado anterior à permissão para incorporar conteúdo externo; demonstração local sem carregar terceiros.",
+      "html": "<section class=\"ds-instagram\"><h3>Publicações de<br>@caioleonardi.psi</h3><p>Para mostrar os posts, precisamos carregar conteúdo do Instagram. Ao permitir, a Meta poderá receber dados de navegação e usar cookies conforme sua política.</p><button class=\"ds-button ds-instagram-button\">Permitir e ver publicações</button><a href=\"https://www.instagram.com/caioleonardi.psi/\" target=\"_blank\" rel=\"noopener noreferrer\">Prefiro abrir o perfil em outra aba</a></section>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:58px;padding:16px 24px;border:1px solid transparent;border-radius:8px;font:600 13px/1.5 var(--sans);background:var(--color-accent);color:white;cursor:pointer;transition:background .2s,box-shadow .2s}.ds-button:hover{background:var(--color-accent-hover);box-shadow:0 6px 18px #0b25451c}.ds-button:focus-visible{outline:3px solid #527DFA;outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-instagram{min-height:470px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:42px 32px;text-align:center;background:var(--color-bg-alt);border:1px solid var(--color-border);border-radius:8px}.ds-instagram h3{font:400 28px/1.4 var(--serif);color:var(--color-primary);margin:0 0 19px}.ds-instagram p{font:13px/1.8 var(--sans);max-width:390px;color:var(--color-text-muted);margin:0 0 24px}.ds-instagram-button{font-size:12px;min-height:52px}.ds-instagram>a{font:11px var(--sans);text-decoration:underline;margin-top:19px;color:var(--color-secondary)}.ds-instagram>a:focus-visible{outline:3px solid #527DFA;outline-offset:5px}"
     }
   ],
   "narrative": {
@@ -283,7 +275,7 @@
     "keyCharacteristics": [
       "Azul-marinho em grandes campos, branco na abertura e cobalto nas ações sobre fundo claro.",
       "Lora para títulos; Inter para leitura e interface.",
-      "Espaçamento amplo, divisórias finas, etapas verticais e cartões editoriais de grande escala.",
+      "Espaçamento amplo, divisórias finas, etapas verticais e integração de conteúdo com consentimento.",
       "Fotografia autêntica e marca fornecida."
     ],
     "rules": [
@@ -308,13 +300,13 @@
       "**Do** usar marinho para estrutura, ação branca na abertura e cobalto para ações sobre fundos claros.",
       "**Do** manter títulos em Lora e interface em Inter.",
       "**Do** preservar o foco visível e a preferência de movimento reduzido.",
-      "**Do** identificar estados indisponíveis e conteúdos editoriais de forma explícita."
+      "**Do** apresentar a permissão do Instagram antes de carregar conteúdo externo e manter o link direto alternativo."
     ],
     "donts": [
       "**Don't** transformar o selo obrigatório da abertura em um padrão de sobrancelhas para novas seções.",
-      "**Don't** usar os tons pontuais dos cartões ou o verde do WhatsApp como novas cores institucionais.",
+      "**Don't** usar o verde do WhatsApp como nova cor institucional.",
       "**Don't** documentar textos auxiliares muito pequenos como uma escala recomendada para novas telas.",
-      "**Don't** sugerir inscrições funcionais ou publicações importadas quando essas integrações não existem."
+      "**Don't** simular publicações com cartões locais ou apresentar a incorporação como conteúdo controlado pelo site."
     ]
   }
 }
