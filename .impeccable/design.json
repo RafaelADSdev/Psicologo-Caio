@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-06T23:46:54.083609+00:00",
+  "generatedAt": "2026-11-06T23:52:53.726390+00:00",
   "title": "Design System: Caio Leonardi",
   "extensions": {
     "colorMeta": {
@@ -157,26 +157,66 @@
         "purpose": "Contato flutuante."
       },
       {
-        "name": "privacy",
-        "value": "0 8px 35px #0b254529",
-        "purpose": "Painel de privacidade."
-      },
-      {
         "name": "mobile-nav",
         "value": "0 10px 20px #0b25450d",
         "purpose": "Menu móvel."
+      },
+      {
+        "name": "header-scrolled",
+        "value": "0 5px 25px #0b254512",
+        "purpose": "Cabeçalho após 20px de rolagem."
+      },
+      {
+        "name": "floating-contact-hover",
+        "value": "0 9px 26px #0b254530",
+        "purpose": "Contato flutuante em hover."
       }
     ],
     "motion": [
       {
         "name": "state-transition",
         "value": ".2s ease",
-        "purpose": "Fundo e sombra; desativado com prefers-reduced-motion."
+        "purpose": "Fundo e sombra dos botões."
       },
       {
-        "name": "portrait-arrives",
-        "value": ".8s cubic-bezier(.16,1,.3,1)",
-        "purpose": "Retrato: translateY(10px) e brightness(.82) para posição e brilho normais; apenas sem preferência de movimento reduzido."
+        "name": "interaction-transition",
+        "value": ".25s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Setas e sublinhado da navegação; deslocamentos de hover de 4px."
+      },
+      {
+        "name": "opening-copy",
+        "value": ".65s–.85s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Entradas escalonadas da abertura: opacity .55 e translateY(15px), atrasos de 0 a .25s."
+      },
+      {
+        "name": "portrait-opening",
+        "value": "1s .1s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Recorte horizontal de 9% para zero e luminosidade .85 para 1; legenda em .8s com atraso .3s."
+      },
+      {
+        "name": "section-reveal",
+        "value": "750ms cubic-bezier(.16,1,.3,1)",
+        "purpose": "Uma entrada por interseção de viewport, opacity .55 e translateY(18px). Etapas usam 650ms e translateX(18px). Conteúdo visível por padrão."
+      },
+      {
+        "name": "encounter-draw",
+        "value": "1300ms cubic-bezier(.16,1,.3,1)",
+        "purpose": "Caminhos SVG com comprimento real e atraso de 150ms entre caminhos."
+      },
+      {
+        "name": "details-enter",
+        "value": "260ms ease-out",
+        "purpose": "Parágrafo do acordeão de opacity .5 e translateY(-6px) para estado final."
+      },
+      {
+        "name": "menu-opening",
+        "value": ".22s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Recorte e opacidade na abertura do menu móvel."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "Pula animações de runtime, cancela as em execução e desativa CSS animations, transitions, rolagem suave e deslocamentos de hover."
       },
       {
         "name": "focus",
@@ -228,7 +268,7 @@
       "refersTo": "button-primary",
       "description": "Ação principal de contato.",
       "html": "<button class=\"ds-button\">Agendar consulta</button>",
-      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:58px;padding:16px 24px;border:1px solid transparent;border-radius:8px;font:600 13px/1.5 var(--sans);background:var(--color-accent);color:white;cursor:pointer;transition:background .2s,box-shadow .2s}.ds-button:hover{background:var(--color-accent-hover);box-shadow:0 6px 18px #0b25451c}.ds-button:focus-visible{outline:3px solid #527DFA;outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}"
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:58px;padding:16px 24px;border:1px solid transparent;border-radius:8px;font:600 13px/1.5 var(--sans);background:var(--color-accent);color:white;cursor:pointer;transition:background .2s,box-shadow .2s}.ds-button:hover{background:var(--color-accent-hover);box-shadow:0 6px 18px #0b25451c}.ds-button:focus-visible{outline:3px solid #527DFA;outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-button:active{transform:translateY(1px)}@media(prefers-reduced-motion:reduce){.ds-button:active{transform:none}}"
     },
     {
       "name": "Outline Button",
@@ -236,7 +276,7 @@
       "refersTo": "button-outline",
       "description": "Ação secundária.",
       "html": "<button class=\"ds-button ds-outline\">Somente necessários</button>",
-      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:58px;padding:16px 24px;border:1px solid transparent;border-radius:8px;font:600 13px/1.5 var(--sans);background:var(--color-accent);color:white;cursor:pointer;transition:background .2s,box-shadow .2s}.ds-button:hover{background:var(--color-accent-hover);box-shadow:0 6px 18px #0b25451c}.ds-button:focus-visible{outline:3px solid #527DFA;outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-outline{background:white;color:var(--color-primary);border-color:var(--color-border)}.ds-outline:hover{background:var(--color-bg-alt)}"
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:58px;padding:16px 24px;border:1px solid transparent;border-radius:8px;font:600 13px/1.5 var(--sans);background:var(--color-accent);color:white;cursor:pointer;transition:background .2s,box-shadow .2s}.ds-button:hover{background:var(--color-accent-hover);box-shadow:0 6px 18px #0b25451c}.ds-button:focus-visible{outline:3px solid #527DFA;outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-outline{background:white;color:var(--color-primary);border-color:var(--color-border)}.ds-outline:hover{background:var(--color-bg-alt)}.ds-button:active{transform:translateY(1px)}@media(prefers-reduced-motion:reduce){.ds-button:active{transform:none}}"
     },
     {
       "name": "Navigation",
@@ -251,7 +291,7 @@
       "refersTo": "button-hero",
       "description": "Ação branca sobre a abertura marinho.",
       "html": "<div class=\"ds-stage\"><button class=\"ds-button ds-hero\">Agendar consulta via WhatsApp</button></div>",
-      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:58px;padding:16px 24px;border:1px solid transparent;border-radius:8px;font:600 13px/1.5 var(--sans);background:var(--color-accent);color:white;cursor:pointer;transition:background .2s,box-shadow .2s}.ds-button:hover{background:var(--color-accent-hover);box-shadow:0 6px 18px #0b25451c}.ds-button:focus-visible{outline:3px solid #527DFA;outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-stage{background:var(--color-primary);padding:24px}.ds-hero{background:white;color:var(--color-primary);padding-inline:21px}.ds-hero:hover{background:#e9f0fa}"
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:58px;padding:16px 24px;border:1px solid transparent;border-radius:8px;font:600 13px/1.5 var(--sans);background:var(--color-accent);color:white;cursor:pointer;transition:background .2s,box-shadow .2s}.ds-button:hover{background:var(--color-accent-hover);box-shadow:0 6px 18px #0b25451c}.ds-button:focus-visible{outline:3px solid #527DFA;outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-stage{background:var(--color-primary);padding:24px}.ds-hero{background:white;color:var(--color-primary);padding-inline:21px}.ds-hero:hover{background:#e9f0fa}.ds-button:active{transform:translateY(1px)}@media(prefers-reduced-motion:reduce){.ds-button:active{transform:none}}"
     },
     {
       "name": "Navigation Button",
@@ -259,14 +299,7 @@
       "refersTo": "button-navigation",
       "description": "Ação contornada do cabeçalho.",
       "html": "<button class=\"ds-button ds-nav-cta\">Agendar consulta</button>",
-      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:58px;padding:16px 24px;border:1px solid transparent;border-radius:8px;font:600 13px/1.5 var(--sans);background:var(--color-accent);color:white;cursor:pointer;transition:background .2s,box-shadow .2s}.ds-button:hover{background:var(--color-accent-hover);box-shadow:0 6px 18px #0b25451c}.ds-button:focus-visible{outline:3px solid #527DFA;outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-nav-cta{min-height:43px;padding:11px 17px;font-size:11px;background:transparent;color:var(--color-primary);border-color:#b9c6d6}.ds-nav-cta:hover{background:var(--color-primary);color:white}"
-    },
-    {
-      "name": "Instagram Permission",
-      "kind": "custom",
-      "description": "Estado anterior à permissão para incorporar conteúdo externo; demonstração local sem carregar terceiros.",
-      "html": "<section class=\"ds-instagram\"><h3>Publicações de<br>@caioleonardi.psi</h3><p>Para mostrar os posts, precisamos carregar conteúdo do Instagram. Ao permitir, a Meta poderá receber dados de navegação e usar cookies conforme sua política.</p><button class=\"ds-button ds-instagram-button\">Permitir e ver publicações</button><a href=\"https://www.instagram.com/caioleonardi.psi/\" target=\"_blank\" rel=\"noopener noreferrer\">Prefiro abrir o perfil em outra aba</a></section>",
-      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:58px;padding:16px 24px;border:1px solid transparent;border-radius:8px;font:600 13px/1.5 var(--sans);background:var(--color-accent);color:white;cursor:pointer;transition:background .2s,box-shadow .2s}.ds-button:hover{background:var(--color-accent-hover);box-shadow:0 6px 18px #0b25451c}.ds-button:focus-visible{outline:3px solid #527DFA;outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-instagram{min-height:470px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:42px 32px;text-align:center;background:var(--color-bg-alt);border:1px solid var(--color-border);border-radius:8px}.ds-instagram h3{font:400 28px/1.4 var(--serif);color:var(--color-primary);margin:0 0 19px}.ds-instagram p{font:13px/1.8 var(--sans);max-width:390px;color:var(--color-text-muted);margin:0 0 24px}.ds-instagram-button{font-size:12px;min-height:52px}.ds-instagram>a{font:11px var(--sans);text-decoration:underline;margin-top:19px;color:var(--color-secondary)}.ds-instagram>a:focus-visible{outline:3px solid #527DFA;outline-offset:5px}"
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:58px;padding:16px 24px;border:1px solid transparent;border-radius:8px;font:600 13px/1.5 var(--sans);background:var(--color-accent);color:white;cursor:pointer;transition:background .2s,box-shadow .2s}.ds-button:hover{background:var(--color-accent-hover);box-shadow:0 6px 18px #0b25451c}.ds-button:focus-visible{outline:3px solid #527DFA;outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-nav-cta{min-height:43px;padding:11px 17px;font-size:11px;background:transparent;color:var(--color-primary);border-color:#b9c6d6}.ds-nav-cta:hover{background:var(--color-primary);color:white}.ds-button:active{transform:translateY(1px)}@media(prefers-reduced-motion:reduce){.ds-button:active{transform:none}}"
     }
   ],
   "narrative": {
@@ -275,7 +308,7 @@
     "keyCharacteristics": [
       "Azul-marinho em grandes campos, branco na abertura e cobalto nas ações sobre fundo claro.",
       "Lora para títulos; Inter para leitura e interface.",
-      "Espaçamento amplo, divisórias finas, etapas verticais e integração de conteúdo com consentimento.",
+      "Espaçamento amplo, divisórias finas, etapas verticais e conteúdo nativo do Instagram e movimento breve de entrada.",
       "Fotografia autêntica e marca fornecida."
     ],
     "rules": [
@@ -300,7 +333,7 @@
       "**Do** usar marinho para estrutura, ação branca na abertura e cobalto para ações sobre fundos claros.",
       "**Do** manter títulos em Lora e interface em Inter.",
       "**Do** preservar o foco visível e a preferência de movimento reduzido.",
-      "**Do** apresentar a permissão do Instagram antes de carregar conteúdo externo e manter o link direto alternativo."
+      "**Do** manter o Instagram nativo visível automaticamente com carregamento adiado e link direto alternativo."
     ],
     "donts": [
       "**Don't** transformar o selo obrigatório da abertura em um padrão de sobrancelhas para novas seções.",

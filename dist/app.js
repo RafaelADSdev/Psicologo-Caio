@@ -19,60 +19,81 @@ menuButton?.addEventListener('click', () => {
 nav?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 document.addEventListener('keydown', event => { if (event.key === 'Escape') { closeMenu(); } });
 document.querySelector('#year')?.replaceChildren(String(new Date().getFullYear()));
-const banner = document.querySelector('#cookie-banner');
-// A versão nova solicita uma escolha específica para mídia da Meta.
-const preferenceKey = 'cl-privacy-v2';
-let savedPreference;
-try { savedPreference = localStorage.getItem(preferenceKey); } catch { /* armazenamento indisponível */ }
-const validPreferences = ['necessary', 'instagram'];
-if (!validPreferences.includes(savedPreference)) savedPreference = null;
-if (banner && !savedPreference) banner.hidden = false;
-const embedRoot = document.querySelector('#instagram-embed');
-const consentPanel = document.querySelector('#instagram-consent');
-let embedObserver;
-function renderInstagram() {
-  if (savedPreference !== 'instagram' || !embedRoot || embedRoot.querySelector('iframe')) return;
-  const username = config.instagramUsername;
-  if (!/^[a-zA-Z0-9._]{1,30}$/.test(username)) return;
-  const frame = document.createElement('iframe');
-  frame.title = `Publicações do Instagram de @${username}`;
-  frame.src = `https://www.instagram.com/${username}/embed/`;
-  frame.loading = 'lazy';
-  frame.referrerPolicy = 'strict-origin-when-cross-origin';
-  frame.width = '660';
-  frame.height = '680';
-  if (consentPanel) consentPanel.hidden = true;
-  embedRoot.append(frame);
+// Conteúdo visível por padrão: animações são um aprimoramento opcional.
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const runningAnimations = new Set();
+let revealObserver;
+function animateElement(element, frames, options) {
+  if (reducedMotion.matches || typeof element.animate !== 'function') return;
+  const animation = element.animate(frames, options);
+  runningAnimations.add(animation);
+  animation.finished.catch(() => {}).finally(() => runningAnimations.delete(animation));
 }
-function applyPreference() {
-  embedObserver?.disconnect();
-  if (savedPreference !== 'instagram') {
-    embedRoot?.querySelector('iframe')?.remove();
-    if (consentPanel) consentPanel.hidden = false;
+function reveal(element) {
+  const kind = element.dataset.motion;
+  if (kind === 'encounter') {
+    element.querySelectorAll('path').forEach((path, index) => {
+      const length = path.getTotalLength();
+      animateElement(path, [
+        { strokeDasharray: `${length} ${length}`, strokeDashoffset: length },
+        { strokeDasharray: `${length} ${length}`, strokeDashoffset: 0 }
+      ], { duration: 1300, delay: index * 150, easing: 'cubic-bezier(.16,1,.3,1)' });
+    });
     return;
   }
-  if (!embedRoot) return;
-  if ('IntersectionObserver' in window) {
-    embedObserver = new IntersectionObserver(entries => {
-      if (entries.some(entry => entry.isIntersecting)) {
-        renderInstagram();
-        embedObserver.disconnect();
-      }
-    }, { rootMargin: '250px' });
-    embedObserver.observe(embedRoot);
-  } else { renderInstagram(); }
+  const isStep = kind === 'step';
+  animateElement(element, [
+    { opacity: .55, transform: isStep ? 'translateX(18px)' : 'translateY(18px)' },
+    { opacity: 1, transform: 'translate(0,0)' }
+  ], { duration: isStep ? 650 : 750, easing: 'cubic-bezier(.16,1,.3,1)' });
 }
-function savePreference(value) {
-  savedPreference = value;
-  try { localStorage.setItem(preferenceKey, value); } catch { /* escolha válida nesta visita */ }
-  if (banner) banner.hidden = true;
-  applyPreference();
+function observeMotion() {
+  revealObserver?.disconnect();
+  if (reducedMotion.matches || !('IntersectionObserver' in window)) return;
+  revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      reveal(entry.target);
+      revealObserver.unobserve(entry.target);
+    });
+  }, { threshold: .16 });
+  [
+    ['.about-heading, .support-intro, .instagram-intro, .closing h2', 'section'],
+    ['.steps li', 'step'],
+    ['.encounter-art', 'encounter']
+  ].forEach(([selector, kind]) => document.querySelectorAll(selector).forEach(element => {
+    element.dataset.motion = kind;
+    revealObserver.observe(element);
+  }));
 }
-document.querySelector('#cookie-necessary')?.addEventListener('click', () => savePreference('necessary'));
-document.querySelector('#cookie-accept')?.addEventListener('click', () => savePreference('instagram'));
-document.querySelector('#load-instagram')?.addEventListener('click', () => savePreference('instagram'));
-document.querySelector('#cookie-preferences')?.addEventListener('click', () => {
-  if (banner) banner.hidden = false;
-  document.querySelector('#cookie-necessary')?.focus();
+reducedMotion.addEventListener('change', () => {
+  if (reducedMotion.matches) {
+    runningAnimations.forEach(animation => animation.cancel());
+    runningAnimations.clear();
+  }
+  observeMotion();
 });
-applyPreference();
+observeMotion();
+document.querySelectorAll('.topics details').forEach(details => {
+  details.addEventListener('toggle', () => {
+    if (!details.open) return;
+    const paragraph = details.querySelector('p');
+    if (paragraph) animateElement(paragraph, [
+      { opacity: .5, transform: 'translateY(-6px)' },
+      { opacity: 1, transform: 'translateY(0)' }
+    ], { duration: 260, easing: 'ease-out' });
+  });
+});
+// Une ombre leve distingue o cabeçalho quando o conteúdo passa por trás.
+const header = document.querySelector('.header');
+let scrollFramePending = false;
+function updateHeader() {
+  header?.classList.toggle('is-scrolled', window.scrollY > 20);
+  scrollFramePending = false;
+}
+window.addEventListener('scroll', () => {
+  if (scrollFramePending) return;
+  scrollFramePending = true;
+  requestAnimationFrame(updateHeader);
+}, { passive: true });
+updateHeader();

@@ -81,7 +81,7 @@ A abertura marinho e o rodapé escuro emolduram áreas brancas e superfícies cl
 **Key Characteristics:**
 - Azul-marinho em grandes campos, branco na abertura e cobalto nas ações sobre fundo claro.
 - Lora para títulos; Inter para leitura e interface.
-- Espaçamento amplo, divisórias finas, etapas verticais e integração de conteúdo com consentimento.
+- Espaçamento amplo, divisórias finas, etapas verticais e conteúdo nativo do Instagram e movimento breve de entrada.
 - Fotografia autêntica e marca fornecida.
 
 ## Colors
@@ -132,7 +132,7 @@ O cabeçalho fixo ao rolar tem altura de (94px), reduzida a (78px) no celular. A
 
 ## Elevation & Depth
 
-A base é plana: alternância tonal, divisórias finas e fotografia criam hierarquia. Sombras suaves aparecem nos botões em hover, no menu móvel e nos controles flutuantes. Não há sombras duras deslocadas. Os valores exatos dessas exceções ficam no sidecar.
+A base é plana: alternância tonal, divisórias finas e fotografia criam hierarquia. Sombras suaves aparecem nos botões em hover, no menu móvel e nos controles flutuantes. Ao rolar além de (20px), o cabeçalho recebe uma sombra suave. Não há sombras duras deslocadas. Os valores exatos dessas exceções ficam no sidecar.
 
 ### Named Rules
 **The Quiet Surface Rule.** Conteúdo institucional permanece plano; sombra suave serve à interação ou à separação de controles sobrepostos.
@@ -152,19 +152,24 @@ Ações sólidas e compactas, com texto semibold e ícones SVG lineares.
 - **Small:** altura mínima (43px), preenchimento (11px 17px), texto (11px).
 - **Outline:** fundo branco, contorno de divisória e texto marinho; hover com fundo claro.
 - **Hover / Focus:** transições de fundo e sombra em (.2s). Foco visível com contorno azul luminoso de (3px), afastado (5px).
-- **Reduced motion:** a preferência de movimento reduzido desativa transições, animação e rolagem suave. Sem essa preferência, o retrato entra em (.8s), com deslocamento vertical de (10px) e mudança sutil de luminosidade.
+- **Reduced motion:** a preferência de movimento reduzido desativa animações, transições e rolagem suave, incluindo movimentos de hover. Animações em execução são canceladas quando a preferência muda.
+- **Motion:** a abertura usa entradas curtas e escalonadas para selo, título, parágrafo e botão; o retrato revela seu recorte e luminosidade, seguido pela legenda. Introduções de seção entram uma vez ao chegar à área visível; as etapas entram lateralmente. Os caminhos SVG do encontro se desenham por seu comprimento real. O conteúdo permanece visível sem JavaScript ou suporte às animações.
+
+### Respostas de interação
+
+Setas de botões e links avançam (4px) em hover; botões respondem à pressão com deslocamento vertical de (1px). O contato flutuante sobe (4px) em hover. As transições espaciais usam aproximadamente (.25s) e são desligadas com movimento reduzido. O movimento de leitura é pontual, sem repetição contínua.
 
 ### Conteúdo do Instagram
 
 O painel incorpora o perfil nativo de `@caioleonardi.psi`, com borda fria fina, cantos de superfície e recorte do conteúdo. A tipografia e o conteúdo dentro do iframe pertencem ao Instagram e não definem os tokens locais.
 
-Antes da autorização, uma superfície clara apresenta ícone SVG, título Lora, explicação, botão de permissão e link direto alternativo. O painel de permissão tem altura mínima de (470px), preenchimento de (42px 32px), texto de (13px) e botão com altura mínima de (52px). No celular, usa altura mínima de (450px) e preenchimento de (32px 22px). A altura do iframe é específica da integração e deve acompanhar o CSS entregue, sem virar um token de contêiner.
+O iframe nativo já está presente no HTML, com carregamento automático adiado pelo navegador (`loading="lazy"`). Não há botão de permissão, painel de consentimento, preferências salvas ou banner de cookies. O usuário encontra os posts diretamente na seção, conforme o serviço externo os disponibiliza. Um link abaixo do painel permite abrir o perfil quando a incorporação não aparece.
 
-O iframe só é criado após a escolha explícita de permitir Instagram; com permissão lembrada, aguarda a proximidade da seção para carregar. A escolha de somente necessários mantém a apresentação de permissão. As preferências podem ser reabertas no rodapé. Um link abaixo do painel permite abrir o perfil quando a incorporação não aparece. A decisão salva usa a versão atual de preferências; não representa uma autorização genérica a outras integrações.
+O iframe tem altura de (680px) no desktop e (440px) abaixo de (760px). São dimensões específicas desta integração, não tokens de contêiner. O conteúdo incorporado mantém sua própria interface e seu próprio comportamento.
 
 ### Navigation
 
-Marca à esquerda, links horizontais e ação contornada à direita. A ação do cabeçalho ganha fundo marinho e texto branco em hover. Hover dos links em cobalto. No celular, o botão de menu abre uma lista vertical sob o cabeçalho, com links de (14px) e área de toque ampliada. O foco segue o contorno global.
+Marca à esquerda, links horizontais e ação contornada à direita. A ação do cabeçalho ganha fundo marinho e texto branco em hover. Hover dos links em cobalto. No celular, o botão de menu abre uma lista vertical sob o cabeçalho, com links de (14px) e área de toque ampliada. O foco segue o contorno global. Os links recebem uma linha inferior progressiva; o menu móvel abre com recorte breve. A atualização da sombra do cabeçalho acompanha a rolagem com processamento limitado por quadro.
 
 ### Faixa de abordagem e rodapé
 
@@ -172,11 +177,11 @@ A faixa escura reúne desenho SVG de encontro, citação grande e texto claro em
 
 ### Acordeão de especialidades
 
-Elementos nativos `details` e `summary`, separados por divisórias. O título serifado é acompanhado por um sinal de expansão, girado (45deg) quando aberto. A primeira entrada inicia expandida. O marcador padrão do navegador é ocultado.
+Elementos nativos `details` e `summary`, separados por divisórias. O título serifado é acompanhado por um sinal de expansão, girado (45deg) quando aberto. A primeira entrada inicia expandida. O marcador padrão do navegador é ocultado. A abertura destaca o fundo claro e apresenta o parágrafo em uma entrada de (260ms), respeitando movimento reduzido.
 
 ### Exceções locais aprovadas
 
-O selo de atendimento online acima do título é exigido pelo usuário e permanece uma exceção da abertura, sem virar uma regra de sobrancelhas para novas seções. O verde reconhecível do WhatsApp pertence apenas ao controle flutuante de contato. O painel do Instagram mantém sua permissão e alternativa de acesso visíveis; a newsletter e os antigos cartões editoriais foram removidos.
+O selo de atendimento online acima do título é exigido pelo usuário e permanece uma exceção da abertura, sem virar uma regra de sobrancelhas para novas seções. O verde reconhecível do WhatsApp pertence apenas ao controle flutuante de contato. O painel do Instagram aparece automaticamente e mantém uma alternativa de acesso direto; a newsletter e os antigos cartões editoriais foram removidos.
 
 ## Do's and Don'ts
 
@@ -185,7 +190,7 @@ O selo de atendimento online acima do título é exigido pelo usuário e permane
 - **Do** usar marinho para estrutura, ação branca na abertura e cobalto para ações sobre fundos claros.
 - **Do** manter títulos em Lora e interface em Inter.
 - **Do** preservar o foco visível e a preferência de movimento reduzido.
-- **Do** apresentar a permissão do Instagram antes de carregar conteúdo externo e manter o link direto alternativo.
+- **Do** manter o Instagram nativo visível automaticamente com carregamento adiado e link direto alternativo.
 
 ### Don't:
 - **Don't** transformar o selo obrigatório da abertura em um padrão de sobrancelhas para novas seções.
