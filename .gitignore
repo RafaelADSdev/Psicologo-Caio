@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.*
+!.env.example
+*.pem
+.openai/local/
+.impeccable/review/
+.impeccable/build/
+*.tar.gz

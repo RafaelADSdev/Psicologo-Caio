@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://caio-leonardi-psicologia-online.wittyphlox3.chatgpt.site/sitemap.xml

@@ -1,0 +1,1 @@
+{"name":"caio-leonardi-psicologia","version":"1.0.0","private":true,"description":"Site institucional estático de psicologia online","scripts":{"dev":"node scripts/serve.mjs","check":"node --check dist/app.js && node --check dist/config.js"}}
