@@ -38,3 +38,6 @@ Referências consultadas em 06/11/2026: [publicidade profissional — CFP/CRP](h
 Hospedagem no Sites, inicialmente privada para revisão. O acesso público precisa ser solicitado pelo cliente. Para outra hospedagem estática, envie `dist/` e atualize URLs canônicas, Open Graph, sitemap e robots. O repositório de origem da hospedagem é separado de um eventual repositório GitHub.
 
 A meta PageSpeed acima de 90 não foi certificada; deve ser aferida na URL de produção acessível ao teste. Não se afirma criptografia de uma plataforma de videochamada antes de o profissional escolher a plataforma.
+
+## Revisão visual — 06/11/2026
+Após o feedback de que a primeira versão era genérica, a página ganhou abertura marinho, contraste tipográfico, fotografia maior, sequência vertical de atendimento e rodapé tipográfico. Referências visuais pesquisadas e visitadas: [Serotonin](https://www.taylorbowmanmft.com/), [Self Embrace Therapy](https://www.selfembracetherapy.com/) e [Earthbound](https://earthboundpsychotherapy.com/). Foram estudadas composição, escala de imagem e consistência de marca; textos, fotografias e alegações dessas referências não foram reutilizados.

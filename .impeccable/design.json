@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-06T23:35:32.353240+00:00",
+  "title": "Design System: Caio Leonardi",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "displayName": "primary",
+        "role": "primary",
+        "tonalRamp": [
+          "oklch(15.00% 0.06783 255.34)",
+          "oklch(26.43% 0.06783 255.34)",
+          "oklch(37.86% 0.06783 255.34)",
+          "oklch(49.29% 0.06783 255.34)",
+          "oklch(60.71% 0.06783 255.34)",
+          "oklch(72.14% 0.06783 255.34)",
+          "oklch(83.57% 0.06783 255.34)",
+          "oklch(95.00% 0.06783 255.34)"
+        ]
+      },
+      "secondary": {
+        "displayName": "secondary",
+        "role": "secondary",
+        "tonalRamp": [
+          "oklch(15.00% 0.10142 254.72)",
+          "oklch(26.43% 0.10142 254.72)",
+          "oklch(37.86% 0.10142 254.72)",
+          "oklch(49.29% 0.10142 254.72)",
+          "oklch(60.71% 0.10142 254.72)",
+          "oklch(72.14% 0.10142 254.72)",
+          "oklch(83.57% 0.10142 254.72)",
+          "oklch(95.00% 0.10142 254.72)"
+        ]
+      },
+      "accent": {
+        "displayName": "accent",
+        "role": "primary",
+        "tonalRamp": [
+          "oklch(15.00% 0.21717 264.38)",
+          "oklch(26.43% 0.21717 264.38)",
+          "oklch(37.86% 0.21717 264.38)",
+          "oklch(49.29% 0.21717 264.38)",
+          "oklch(60.71% 0.21717 264.38)",
+          "oklch(72.14% 0.21717 264.38)",
+          "oklch(83.57% 0.21717 264.38)",
+          "oklch(95.00% 0.21717 264.38)"
+        ]
+      },
+      "accent-hover": {
+        "displayName": "accent-hover",
+        "role": "primary",
+        "tonalRamp": [
+          "oklch(15.00% 0.18087 265.64)",
+          "oklch(26.43% 0.18087 265.64)",
+          "oklch(37.86% 0.18087 265.64)",
+          "oklch(49.29% 0.18087 265.64)",
+          "oklch(60.71% 0.18087 265.64)",
+          "oklch(72.14% 0.18087 265.64)",
+          "oklch(83.57% 0.18087 265.64)",
+          "oklch(95.00% 0.18087 265.64)"
+        ]
+      },
+      "bg-main": {
+        "displayName": "bg-main",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 89.88)",
+          "oklch(26.43% 0.00000 89.88)",
+          "oklch(37.86% 0.00000 89.88)",
+          "oklch(49.29% 0.00000 89.88)",
+          "oklch(60.71% 0.00000 89.88)",
+          "oklch(72.14% 0.00000 89.88)",
+          "oklch(83.57% 0.00000 89.88)",
+          "oklch(95.00% 0.00000 89.88)"
+        ]
+      },
+      "bg-alt": {
+        "displayName": "bg-alt",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.00% 0.00341 247.86)",
+          "oklch(26.43% 0.00341 247.86)",
+          "oklch(37.86% 0.00341 247.86)",
+          "oklch(49.29% 0.00341 247.86)",
+          "oklch(60.71% 0.00341 247.86)",
+          "oklch(72.14% 0.00341 247.86)",
+          "oklch(83.57% 0.00341 247.86)",
+          "oklch(95.00% 0.00341 247.86)"
+        ]
+      },
+      "text-main": {
+        "displayName": "text-main",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.00% 0.03982 265.75)",
+          "oklch(26.43% 0.03982 265.75)",
+          "oklch(37.86% 0.03982 265.75)",
+          "oklch(49.29% 0.03982 265.75)",
+          "oklch(60.71% 0.03982 265.75)",
+          "oklch(72.14% 0.03982 265.75)",
+          "oklch(83.57% 0.03982 265.75)",
+          "oklch(95.00% 0.03982 265.75)"
+        ]
+      },
+      "text-muted": {
+        "displayName": "text-muted",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.00% 0.03745 257.28)",
+          "oklch(26.43% 0.03745 257.28)",
+          "oklch(37.86% 0.03745 257.28)",
+          "oklch(49.29% 0.03745 257.28)",
+          "oklch(60.71% 0.03745 257.28)",
+          "oklch(72.14% 0.03745 257.28)",
+          "oklch(83.57% 0.03745 257.28)",
+          "oklch(95.00% 0.03745 257.28)"
+        ]
+      },
+      "border": {
+        "displayName": "border",
+        "role": "neutral",
+        "tonalRamp": [
+          "oklch(15.00% 0.01326 251.57)",
+          "oklch(26.43% 0.01326 251.57)",
+          "oklch(37.86% 0.01326 251.57)",
+          "oklch(49.29% 0.01326 251.57)",
+          "oklch(60.71% 0.01326 251.57)",
+          "oklch(72.14% 0.01326 251.57)",
+          "oklch(83.57% 0.01326 251.57)",
+          "oklch(95.00% 0.01326 251.57)"
+        ]
+      },
+      "focus": {
+        "displayName": "focus",
+        "role": "primary",
+        "tonalRamp": [
+          "oklch(15.00% 0.19238 266.55)",
+          "oklch(26.43% 0.19238 266.55)",
+          "oklch(37.86% 0.19238 266.55)",
+          "oklch(49.29% 0.19238 266.55)",
+          "oklch(60.71% 0.19238 266.55)",
+          "oklch(72.14% 0.19238 266.55)",
+          "oklch(83.57% 0.19238 266.55)",
+          "oklch(95.00% 0.19238 266.55)"
+        ]
+      }
+    },
+    "shadows": [
+      {
+        "name": "button-hover",
+        "value": "0 6px 18px #0b25451c",
+        "purpose": "Hover de botões."
+      },
+      {
+        "name": "card-hover",
+        "value": "0 8px 28px #0b25451a",
+        "purpose": "Hover editorial."
+      },
+      {
+        "name": "floating-contact",
+        "value": "0 5px 20px #0b25452a",
+        "purpose": "Contato flutuante."
+      },
+      {
+        "name": "privacy",
+        "value": "0 8px 35px #0b254529",
+        "purpose": "Painel de privacidade."
+      },
+      {
+        "name": "mobile-nav",
+        "value": "0 10px 20px #0b25450d",
+        "purpose": "Menu móvel."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state-transition",
+        "value": ".2s ease",
+        "purpose": "Fundo e sombra; desativado com prefers-reduced-motion."
+      },
+      {
+        "name": "portrait-arrives",
+        "value": ".8s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Retrato: translateY(10px) e brightness(.82) para posição e brilho normais; apenas sem preferência de movimento reduzido."
+      },
+      {
+        "name": "focus",
+        "value": "3px solid #527DFA; outline-offset:5px",
+        "purpose": "Foco visível."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide",
+        "value": "1600px"
+      },
+      {
+        "name": "compact-desktop",
+        "value": "1150px"
+      },
+      {
+        "name": "tablet",
+        "value": "940px"
+      },
+      {
+        "name": "mobile",
+        "value": "760px"
+      },
+      {
+        "name": "small-mobile",
+        "value": "370px"
+      }
+    ],
+    "typographyMeta": {
+      "body": {
+        "displayName": "Leitura principal",
+        "purpose": "Texto explicativo em 16px, inclusive no celular; notas, metadados e controles possuem tamanhos próprios."
+      },
+      "display": {
+        "displayName": "Abertura editorial",
+        "purpose": "Lora branca com ênfase azul-clara sobre marinho."
+      }
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ação principal de contato.",
+      "html": "<button class=\"ds-button\">Agendar consulta</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:58px;padding:16px 24px;border:1px solid transparent;border-radius:8px;font:600 13px/1.5 var(--sans);background:var(--color-accent);color:white;cursor:pointer;transition:background .2s,box-shadow .2s}.ds-button:hover{background:var(--color-accent-hover);box-shadow:0 6px 18px #0b25451c}.ds-button:focus-visible{outline:3px solid #527DFA;outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Ação secundária.",
+      "html": "<button class=\"ds-button ds-outline\">Somente necessários</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:58px;padding:16px 24px;border:1px solid transparent;border-radius:8px;font:600 13px/1.5 var(--sans);background:var(--color-accent);color:white;cursor:pointer;transition:background .2s,box-shadow .2s}.ds-button:hover{background:var(--color-accent-hover);box-shadow:0 6px 18px #0b25451c}.ds-button:focus-visible{outline:3px solid #527DFA;outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-outline{background:white;color:var(--color-primary);border-color:var(--color-border)}.ds-outline:hover{background:var(--color-bg-alt)}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "description": "Campo de formulário com rótulo explícito.",
+      "html": "<label class=\"ds-label\">Seu nome<input class=\"ds-input\" placeholder=\"Como podemos chamar você?\"></label>",
+      "css": ".ds-label{font:600 11px var(--sans)}.ds-input{display:block;padding:13px;margin-top:7px;min-height:51px;border:1px solid #bdcbd9;border-radius:6px;background:white;color:var(--color-text-main);font:12px var(--sans)}.ds-input::placeholder{color:var(--color-text-muted);opacity:1}.ds-input:focus-visible{outline:3px solid #527DFA;outline-offset:5px}.ds-input:disabled{background:#f0f3f7;color:var(--color-text-muted)}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "Links sóbrios com resposta de cor.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#sobre\">Sobre mim</a><a href=\"#atendimento\">Atendimento</a></nav>",
+      "css": ".ds-nav{display:flex;gap:26px}.ds-nav a{font:12px var(--sans);color:var(--color-text-main);text-decoration:none;white-space:nowrap}.ds-nav a:hover{color:var(--color-accent)}.ds-nav a:focus-visible{outline:3px solid #527DFA;outline-offset:5px}"
+    },
+    {
+      "name": "Editorial Card",
+      "kind": "card",
+      "description": "Cartão editorial de tema, sem alegar publicação integrada.",
+      "html": "<a class=\"ds-card\" href=\"#instagram\"><h3>Há espaço para novos sentidos.</h3><span>Explore no Instagram</span></a>",
+      "css": ".ds-card{display:flex;flex-direction:column;justify-content:end;max-width:500px;min-height:295px;padding:29px 32px;background:#edf2f7;border-radius:8px;text-decoration:none;color:var(--color-primary);transition:box-shadow .2s}.ds-card h3{font:400 34px/1.28 var(--serif);letter-spacing:-.02em;margin:65px 0 24px}.ds-card span{font:11px var(--sans);border-top:1px solid #0b254527;padding-top:12px}.ds-card:hover{box-shadow:0 8px 28px #0b25451a}.ds-card:focus-visible{outline:3px solid #527DFA;outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-card{transition:none}}"
+    },
+    {
+      "name": "Hero Button",
+      "kind": "button",
+      "refersTo": "button-hero",
+      "description": "Ação branca sobre a abertura marinho.",
+      "html": "<div class=\"ds-stage\"><button class=\"ds-button ds-hero\">Agendar consulta via WhatsApp</button></div>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:58px;padding:16px 24px;border:1px solid transparent;border-radius:8px;font:600 13px/1.5 var(--sans);background:var(--color-accent);color:white;cursor:pointer;transition:background .2s,box-shadow .2s}.ds-button:hover{background:var(--color-accent-hover);box-shadow:0 6px 18px #0b25451c}.ds-button:focus-visible{outline:3px solid #527DFA;outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-stage{background:var(--color-primary);padding:24px}.ds-hero{background:white;color:var(--color-primary);padding-inline:21px}.ds-hero:hover{background:#e9f0fa}"
+    },
+    {
+      "name": "Navigation Button",
+      "kind": "button",
+      "refersTo": "button-navigation",
+      "description": "Ação contornada do cabeçalho.",
+      "html": "<button class=\"ds-button ds-nav-cta\">Agendar consulta</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:58px;padding:16px 24px;border:1px solid transparent;border-radius:8px;font:600 13px/1.5 var(--sans);background:var(--color-accent);color:white;cursor:pointer;transition:background .2s,box-shadow .2s}.ds-button:hover{background:var(--color-accent-hover);box-shadow:0 6px 18px #0b25451c}.ds-button:focus-visible{outline:3px solid #527DFA;outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button{transition:none}}.ds-nav-cta{min-height:43px;padding:11px 17px;font-size:11px;background:transparent;color:var(--color-primary);border-color:#b9c6d6}.ds-nav-cta:hover{background:var(--color-primary);color:white}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Uma presença acolhedora",
+    "overview": "A presença profissional é sóbria, clara e próxima. A identidade se apoia no azul-marinho, em títulos serifados e no retrato autêntico fornecido, preservando a marca CL. O nome descritivo acima resume o resultado construído, sem acrescentar uma nova direção à identidade aprovada.\n\nA abertura marinho e o rodapé escuro emolduram áreas brancas e superfícies claras. O título branco com itálico azul-claro, o retrato amplo com legenda branca e o nome em grande escala no rodapé dão personalidade editorial à identidade. Textos e divisórias organizam o conteúdo com mais frequência que caixas decorativas. Esta documentação registra `dist/index.html` e `dist/styles.css`; valores pontuais não constituem novos tokens.",
+    "keyCharacteristics": [
+      "Azul-marinho em grandes campos, branco na abertura e cobalto nas ações sobre fundo claro.",
+      "Lora para títulos; Inter para leitura e interface.",
+      "Espaçamento amplo, divisórias finas, etapas verticais e cartões editoriais de grande escala.",
+      "Fotografia autêntica e marca fornecida."
+    ],
+    "rules": [
+      {
+        "name": "The Action Contrast Rule",
+        "body": "O cobalto identifica ações sobre fundos claros; na abertura marinho a ação é branca. O foco mantém seu azul luminoso próprio.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Títulos e passagens reflexivas usam Lora; navegação, ações, formulários e metadados usam Inter.",
+        "section": "typography"
+      },
+      {
+        "name": "The Quiet Surface Rule",
+        "body": "Conteúdo institucional permanece plano; sombra suave serve à interação ou à separação de controles sobrepostos.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** preservar a marca CL e o retrato autêntico fornecido.",
+      "**Do** usar marinho para estrutura, ação branca na abertura e cobalto para ações sobre fundos claros.",
+      "**Do** manter títulos em Lora e interface em Inter.",
+      "**Do** preservar o foco visível e a preferência de movimento reduzido.",
+      "**Do** identificar estados indisponíveis e conteúdos editoriais de forma explícita."
+    ],
+    "donts": [
+      "**Don't** transformar o selo obrigatório da abertura em um padrão de sobrancelhas para novas seções.",
+      "**Don't** usar os tons pontuais dos cartões ou o verde do WhatsApp como novas cores institucionais.",
+      "**Don't** documentar textos auxiliares muito pequenos como uma escala recomendada para novas telas.",
+      "**Don't** sugerir inscrições funcionais ou publicações importadas quando essas integrações não existem."
+    ]
+  }
+}

@@ -16,3 +16,6 @@ Logo CL e retrato fornecidos. Azul-marinho #0B2545, azul #134074, cobalto #1D4ED
 Site.docx e currículo: graduação em Psicologia UNINASSAU, especialização em Filosofia Fenomenológica-Existencial ESUDA, formação em Daseinsanalyse Rede Existências. Contato confirmado pelo usuário.
 ## Open Decisions
 Fornecedor de newsletter e credenciais do feed Instagram não fornecidos. Metas PageSpeed precisam de aferição na URL publicada.
+
+## Preferência confirmada na revisão
+Em 06/11/2026 o usuário rejeitou a primeira versão por ser genérica e sem personalidade. Pediu pesquisa de referências na internet. O redesenho deve valorizar presença pessoal e composição editorial, preservando contatos, conteúdo profissional e identidade CL azul-marinho.
