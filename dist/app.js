@@ -74,14 +74,80 @@ reducedMotion.addEventListener('change', () => {
   observeMotion();
 });
 observeMotion();
+// Anima a altura real nas duas direções, inclusive ao inverter um clique em andamento.
 document.querySelectorAll('.topics details').forEach(details => {
+  const summary = details.querySelector('summary');
+  const paragraph = details.querySelector('p');
+  if (!summary || !paragraph) return;
+  let expanded = details.open;
+  let heightAnimation;
+  let textAnimation;
+  details.classList.toggle('is-expanded', expanded);
+  function settle() {
+    heightAnimation?.cancel();
+    textAnimation?.cancel();
+    heightAnimation = null;
+    textAnimation = null;
+    details.open = expanded;
+    details.style.height = '';
+    details.style.overflow = '';
+    details.classList.remove('is-animating');
+    details.classList.toggle('is-expanded', expanded);
+  }
+  summary.addEventListener('click', event => {
+    // O navegador continua oferecendo a interação nativa quando não há animação.
+    if (reducedMotion.matches || typeof details.animate !== 'function') return;
+    event.preventDefault();
+    const startHeight = details.getBoundingClientRect().height;
+    const textStyle = getComputedStyle(paragraph);
+    const startOpacity = details.open ? textStyle.opacity : '0';
+    const startTransform = details.open ? textStyle.transform : 'translateY(-7px)';
+    heightAnimation?.cancel();
+    textAnimation?.cancel();
+    expanded = !expanded;
+    details.classList.add('is-animating');
+    details.classList.toggle('is-expanded', expanded);
+    details.style.overflow = 'hidden';
+    details.open = true;
+    details.style.height = 'auto';
+    const style = getComputedStyle(details);
+    const borders = parseFloat(style.borderTopWidth) + parseFloat(style.borderBottomWidth);
+    const endHeight = expanded
+      ? details.getBoundingClientRect().height
+      : summary.getBoundingClientRect().height + borders;
+    details.style.height = `${startHeight}px`;
+    const animation = details.animate([
+      { height: `${startHeight}px` },
+      { height: `${endHeight}px` }
+    ], {
+      duration: expanded ? 520 : 400,
+      easing: 'cubic-bezier(.22,1,.36,1)',
+      fill: 'both'
+    });
+    heightAnimation = animation;
+    textAnimation = paragraph.animate([
+      { opacity: startOpacity, transform: startTransform },
+      { opacity: expanded ? 1 : 0, transform: expanded ? 'translateY(0)' : 'translateY(-4px)' }
+    ], {
+      duration: expanded ? 400 : 240,
+      easing: 'cubic-bezier(.22,1,.36,1)',
+      fill: 'both'
+    });
+    animation.onfinish = () => {
+      if (heightAnimation === animation) settle();
+    };
+  });
   details.addEventListener('toggle', () => {
-    if (!details.open) return;
-    const paragraph = details.querySelector('p');
-    if (paragraph) animateElement(paragraph, [
-      { opacity: .5, transform: 'translateY(-6px)' },
-      { opacity: 1, transform: 'translateY(0)' }
-    ], { duration: 260, easing: 'ease-out' });
+    if (heightAnimation) return;
+    expanded = details.open;
+    details.classList.toggle('is-expanded', expanded);
+  });
+  reducedMotion.addEventListener('change', () => {
+    if (reducedMotion.matches) settle();
+  });
+  // Libera a altura medida se a largura mudar durante a transição.
+  window.addEventListener('resize', () => {
+    if (heightAnimation) settle();
   });
 });
 // Une ombre leve distingue o cabeçalho quando o conteúdo passa por trás.

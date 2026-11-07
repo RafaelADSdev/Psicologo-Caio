@@ -115,7 +115,7 @@ A paleta é fria e contida, com contraste entre a estrutura escura e os fundos m
 ### Hierarchy
 - **Display:** papel e valores no frontmatter; no celular o título principal usa (clamp(40px,7vw,52px)), com entrelinha (1.16), e (37px) abaixo de (370px). Na abertura os títulos são brancos, com ênfase em azul-claro.
 - **Headline:** papel e valores no frontmatter; títulos de seção usam (36px) abaixo de (760px), com ajustes por seção.
-- **Title:** títulos de etapas e acordeão usam Lora, (22–24px); o painel de permissão usa título serifado de (28px) na base e (26px) no celular.
+- **Title:** títulos de etapas e acordeão usam Lora, (22–24px).
 - **Body:** o estilo global está no frontmatter. A explicação principal usa (16px) de forma consistente na abertura, apresentação, etapas, especialidades, acordeão, abordagem, introdução do Instagram e fechamento, inclusive no celular. Metadados, notas e controles mantêm tamanhos menores. A introdução serifada usa (26px) e entrelinha (1.5).
 - **Label:** o papel do frontmatter corresponde ao botão principal. A navegação usa (12px); informações auxiliares do site variam entre (10–12px).
 
@@ -177,7 +177,7 @@ A faixa escura reúne desenho SVG de encontro, citação grande e texto claro em
 
 ### Acordeão de especialidades
 
-Elementos nativos `details` e `summary`, separados por divisórias. O título serifado é acompanhado por um sinal de expansão, girado (45deg) quando aberto. A primeira entrada inicia expandida. O marcador padrão do navegador é ocultado. A abertura destaca o fundo claro e apresenta o parágrafo em uma entrada de (260ms), respeitando movimento reduzido.
+Elementos nativos `details` e `summary`, separados por divisórias. O título serifado é acompanhado por um sinal de expansão, girado (45deg) quando aberto. A primeira entrada inicia expandida. O marcador padrão do navegador é ocultado. A altura real expande em (520ms) e recolhe em (400ms), com desaceleração cubic-bezier(.22,1,.36,1). O texto acompanha em (400/240ms), e o ícone gira em (420ms). Cliques rápidos invertem a transição a partir da altura atual. Ao terminar, remove-se a altura fixa; mudança de largura ou ativação de movimento reduzido finaliza o estado solicitado. Sem suporte à animação ou com movimento reduzido, usa a interação nativa.
 
 ### Exceções locais aprovadas
 

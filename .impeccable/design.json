@@ -205,8 +205,8 @@
       },
       {
         "name": "details-enter",
-        "value": "260ms ease-out",
-        "purpose": "Parágrafo do acordeão de opacity .5 e translateY(-6px) para estado final."
+        "value": "520ms / 400ms cubic-bezier(.22,1,.36,1)",
+        "purpose": "Altura real do acordeão nas duas direções; texto acompanha em 400/240ms, ícone em 420ms; reversão a partir da altura atual e fallback nativo com movimento reduzido."
       },
       {
         "name": "menu-opening",
