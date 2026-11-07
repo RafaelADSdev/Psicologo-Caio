@@ -211,6 +211,16 @@ Para trocar o perfil, atualize o iframe, os links, o nome exibido e a política 
 
 ## Publicação
 
+### Vercel
+
+O arquivo [vercel.json](./vercel.json) configura o projeto como site estático, sem instalação ou compilação, publicando **`dist/`**. Ao importar este repositório, mantenha **Root Directory** na raiz do repositório. A pasta de saída já é definida pelo arquivo; não defina `dist/` também como raiz.
+
+Sem essa configuração, a implantação pode terminar com sucesso e retornar 404 na página inicial, porque `index.html` está dentro de `dist/`, não na raiz do repositório.
+
+Com a integração Git da Vercel, novos commits na branch de produção disparam novas implantações. Mudanças no site publicado pelo Sites continuam usando o fluxo separado dessa hospedagem.
+
+### Hospedagem no Sites
+
 O site está hospedado em **Sites**, com acesso privado para revisão:
 
 **[caio-leonardi-psicologia-online.wittyphlox3.chatgpt.site](https://caio-leonardi-psicologia-online.wittyphlox3.chatgpt.site/)**
