@@ -74,11 +74,12 @@ reducedMotion.addEventListener('change', () => {
   observeMotion();
 });
 observeMotion();
-// Anima a altura real nas duas direções, inclusive ao inverter um clique em andamento.
-document.querySelectorAll('.topics details').forEach(details => {
+// O grupo nativo funciona sem JavaScript. Com animação, a opção anterior
+// permanece visível durante o fechamento enquanto a nova se abre.
+const topicPanels = [...document.querySelectorAll('.topics details')].map(details => {
   const summary = details.querySelector('summary');
   const paragraph = details.querySelector('p');
-  if (!summary || !paragraph) return;
+  details.removeAttribute('name');
   let expanded = details.open;
   let heightAnimation;
   let textAnimation;
@@ -94,17 +95,20 @@ document.querySelectorAll('.topics details').forEach(details => {
     details.classList.remove('is-animating');
     details.classList.toggle('is-expanded', expanded);
   }
-  summary.addEventListener('click', event => {
-    // O navegador continua oferecendo a interação nativa quando não há animação.
-    if (reducedMotion.matches || typeof details.animate !== 'function') return;
-    event.preventDefault();
+  function setExpanded(nextExpanded) {
+    if (expanded === nextExpanded) return;
+    if (reducedMotion.matches || typeof details.animate !== 'function') {
+      expanded = nextExpanded;
+      settle();
+      return;
+    }
     const startHeight = details.getBoundingClientRect().height;
     const textStyle = getComputedStyle(paragraph);
     const startOpacity = details.open ? textStyle.opacity : '0';
     const startTransform = details.open ? textStyle.transform : 'translateY(-7px)';
     heightAnimation?.cancel();
     textAnimation?.cancel();
-    expanded = !expanded;
+    expanded = nextExpanded;
     details.classList.add('is-animating');
     details.classList.toggle('is-expanded', expanded);
     details.style.overflow = 'hidden';
@@ -120,8 +124,8 @@ document.querySelectorAll('.topics details').forEach(details => {
       { height: `${startHeight}px` },
       { height: `${endHeight}px` }
     ], {
-      duration: expanded ? 520 : 400,
-      easing: 'cubic-bezier(.22,1,.36,1)',
+      duration: expanded ? 540 : 440,
+      easing: 'cubic-bezier(.4,0,.2,1)',
       fill: 'both'
     });
     heightAnimation = animation;
@@ -129,18 +133,30 @@ document.querySelectorAll('.topics details').forEach(details => {
       { opacity: startOpacity, transform: startTransform },
       { opacity: expanded ? 1 : 0, transform: expanded ? 'translateY(0)' : 'translateY(-4px)' }
     ], {
-      duration: expanded ? 400 : 240,
-      easing: 'cubic-bezier(.22,1,.36,1)',
+      duration: expanded ? 420 : 260,
+      easing: 'cubic-bezier(.4,0,.2,1)',
       fill: 'both'
     });
     animation.onfinish = () => {
       if (heightAnimation === animation) settle();
     };
+  }
+  function closeOtherPanels() {
+    topicPanels.forEach(panel => {
+      if (panel.details !== details) panel.setExpanded(false);
+    });
+  }
+  summary.addEventListener('click', event => {
+    event.preventDefault();
+    const shouldOpen = !expanded;
+    if (shouldOpen) closeOtherPanels();
+    setExpanded(shouldOpen);
   });
   details.addEventListener('toggle', () => {
-    if (heightAnimation) return;
+    if (heightAnimation || details.open === expanded) return;
     expanded = details.open;
     details.classList.toggle('is-expanded', expanded);
+    if (expanded) closeOtherPanels();
   });
   reducedMotion.addEventListener('change', () => {
     if (reducedMotion.matches) settle();
@@ -149,8 +165,9 @@ document.querySelectorAll('.topics details').forEach(details => {
   window.addEventListener('resize', () => {
     if (heightAnimation) settle();
   });
+  return { details, setExpanded };
 });
-// Une ombre leve distingue o cabeçalho quando o conteúdo passa por trás.
+// Uma sombra leve distingue o cabeçalho durante a rolagem.
 const header = document.querySelector('.header');
 let scrollFramePending = false;
 function updateHeader() {

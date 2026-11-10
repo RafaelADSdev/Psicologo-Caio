@@ -9,7 +9,7 @@ Adultos buscando atendimento psicológico online em português.
 ## Product Purpose
 Apresentar Caio Leonardi e converter visitantes em contato direto por WhatsApp.
 ## Capabilities and Constraints
-CRP 02/30232; WhatsApp 5581988088277; Instagram caioleonardi.psi; email caioleonardi@hotmail.com. Dados confirmados pelo usuário. Newsletter removida por pedido do usuário. Perfil real do Instagram incorporado automaticamente, com alternativa de link direto. Não publicar documentos privados. Não inventar depoimentos ou resultados.
+CRP 02/30232; WhatsApp 5581988088277; Instagram caioleonardi.psi; email movimentoexistencial@gmail.com. Dados confirmados pelo usuário. Newsletter removida por pedido do usuário. Perfil real do Instagram incorporado automaticamente, com alternativa de link direto. Não publicar documentos privados. Não inventar depoimentos ou resultados.
 ## Brand Commitments
 Logo CL e retrato fornecidos. Azul-marinho #0B2545, azul #134074, cobalto #1D4ED8; fundos brancos e claros; títulos serifados. Hero com texto à esquerda e foto à direita; seções do escopo com newsletter substituída por Instagram.
 ## Evidence on Hand

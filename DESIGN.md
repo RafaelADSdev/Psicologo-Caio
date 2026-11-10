@@ -177,7 +177,7 @@ A faixa escura reúne desenho SVG de encontro, citação grande e texto claro em
 
 ### Acordeão de especialidades
 
-Elementos nativos `details` e `summary`, separados por divisórias. O título serifado é acompanhado por um sinal de expansão, girado (45deg) quando aberto. A primeira entrada inicia expandida. O marcador padrão do navegador é ocultado. A altura real expande em (520ms) e recolhe em (400ms), com desaceleração cubic-bezier(.22,1,.36,1). O texto acompanha em (400/240ms), e o ícone gira em (420ms). Cliques rápidos invertem a transição a partir da altura atual. Ao terminar, remove-se a altura fixa; mudança de largura ou ativação de movimento reduzido finaliza o estado solicitado. Sem suporte à animação ou com movimento reduzido, usa a interação nativa.
+Elementos nativos `details` e `summary`, separados por divisórias. O título serifado é acompanhado por um sinal de expansão, girado (45deg) quando aberto. A primeira entrada inicia expandida. O marcador padrão do navegador é ocultado. A altura real expande em (540ms) e recolhe em (440ms), com curva cubic-bezier(.4,0,.2,1). O texto acompanha em (420/260ms), e o ícone gira em (440ms). Abrir uma especialidade inicia o fechamento da anterior. Cliques rápidos invertem a transição a partir da altura atual. Ao terminar, remove-se a altura fixa; mudança de largura ou ativação de movimento reduzido finaliza o estado solicitado. Sem suporte à animação ou com movimento reduzido, usa a interação nativa.
 
 ### Exceções locais aprovadas
 

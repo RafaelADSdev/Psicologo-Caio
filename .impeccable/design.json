@@ -205,8 +205,8 @@
       },
       {
         "name": "details-enter",
-        "value": "520ms / 400ms cubic-bezier(.22,1,.36,1)",
-        "purpose": "Altura real do acordeão nas duas direções; texto acompanha em 400/240ms, ícone em 420ms; reversão a partir da altura atual e fallback nativo com movimento reduzido."
+        "value": "540ms / 440ms cubic-bezier(.4,0,.2,1)",
+        "purpose": "Altura real do acordeão nas duas direções; texto acompanha em 420/260ms, ícone em 440ms, uma opção por vez; reversão a partir da altura atual e fallback nativo com movimento reduzido."
       },
       {
         "name": "menu-opening",

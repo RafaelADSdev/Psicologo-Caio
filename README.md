@@ -93,9 +93,9 @@ A página combina uma abertura mais expressiva com interações breves:
 - **Rolagem:** entradas discretas dos títulos e das etapas.
 - **Ilustração:** os traços da seção sobre a abordagem se desenham ao entrar no campo de visão.
 - **Interações:** rotação dos ícones, deslocamento das setas e abertura do menu.
-- **Acordeão:** expansão em **520 ms** e fechamento em **400 ms**, com texto e ícone acompanhando a transição.
+- **Acordeão:** expansão em **540 ms** e fechamento em **440 ms**, com texto e ícone acompanhando a transição.
 
-Cliques rápidos invertem o acordeão a partir da altura atual. Ao terminar, a altura volta a ser automática. Redimensionar a página durante a transição finaliza o estado solicitado.
+Ao abrir uma especialidade, a anterior fecha. Cliques rápidos invertem o acordeão a partir da altura atual. Ao terminar, a altura volta a ser automática. Redimensionar a página durante a transição finaliza o estado solicitado.
 
 A preferência **`prefers-reduced-motion`** desativa os movimentos espaciais e o desenho dos traços; mudanças dessa preferência cancelam animações em andamento. O conteúdo permanece visível por padrão. Sem suporte à animação, `details` e `summary` mantêm o comportamento nativo.
 
