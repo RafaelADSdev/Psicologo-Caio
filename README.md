@@ -66,14 +66,14 @@ As fontes WOFF2 são servidas pelo próprio site. O navegador escolhe entre as v
 Com Node.js e npm instalados, clone o repositório e inicie o servidor. O comando usa apenas módulos nativos do Node.js.
 
 ```bash
-git clone https://github.com/Tekton-DigitalBR/Psicologo-Caio.git
+git clone https://github.com/Vercuno/Psicologo-Caio.git
 cd Psicologo-Caio
 npm run dev
 ```
 
 Abra a página local em [http://127.0.0.1:4173](http://127.0.0.1:4173). Use `npm run check` para validar a sintaxe do JavaScript.
 
-O código está na [Tekton Digital](https://github.com/Tekton-DigitalBR/Psicologo-Caio) e no [repositório de Rafael](https://github.com/RafaelADSdev/Psicologo-Caio).
+O código está disponível nos dois repositórios. [Vercuno](https://github.com/Vercuno/Psicologo-Caio) · [Rafael](https://github.com/RafaelADSdev/Psicologo-Caio)
 
 ## Estrutura do projeto
 
