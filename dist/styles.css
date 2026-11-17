@@ -74,8 +74,11 @@ main .closing > p:not(.registration) {
   font-size: 11px;
 }
 .footer-credit img {
-  width: 98px;
+  width: 112px;
   height: auto;
+  padding: 5px 7px;
+  background: #fff;
+  border-radius: 4px;
 }
 footer > .container > .footer-credit {
   margin-top: 22px;

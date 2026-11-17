@@ -123,8 +123,8 @@ A versão de revisão no Sites usa um fluxo de publicação próprio. [Configura
 
 <table>
   <tr>
-    <td width="150"><img src="./dist/assets/tekton-logo.png" width="120" alt="Tekton Labs"></td>
-    <td><strong>Desenvolvimento por Tekton Labs</strong><br>Projeto institucional para Caio Leonardi Oliveira de Barros.</td>
+    <td width="150"><img src="./dist/assets/vercuno-logo.png" width="120" alt="Vercuno"></td>
+    <td><strong>Feito por Vercuno</strong><br>Projeto institucional para Caio Leonardi Oliveira de Barros.</td>
   </tr>
 </table>
 
