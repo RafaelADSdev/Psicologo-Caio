@@ -76,9 +76,6 @@ main .closing > p:not(.registration) {
 .footer-credit img {
   width: 112px;
   height: auto;
-  padding: 5px 7px;
-  background: #fff;
-  border-radius: 4px;
 }
 footer > .container > .footer-credit {
   margin-top: 22px;

@@ -123,7 +123,12 @@ A versão de revisão no Sites usa um fluxo de publicação próprio. [Configura
 
 <table>
   <tr>
-    <td width="150"><img src="./dist/assets/vercuno-logo.png" width="120" alt="Vercuno"></td>
+    <td width="150">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="./dist/assets/vercuno-branco.png">
+        <img src="./dist/assets/vercuno-logo.png" width="120" alt="Vercuno">
+      </picture>
+    </td>
     <td><strong>Feito por Vercuno</strong><br>Projeto institucional para Caio Leonardi Oliveira de Barros.</td>
   </tr>
 </table>
