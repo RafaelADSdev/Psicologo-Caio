@@ -1,14 +1,18 @@
 'use strict';
 const config = window.SITE_CONFIG;
-document.querySelectorAll('[data-whatsapp]').forEach(link => {
-  link.href = `https://wa.me/${config.whatsapp}?text=${encodeURIComponent(config.message)}`;
-});
+if (config?.whatsapp && typeof config.message === 'string') {
+  document.querySelectorAll('[data-whatsapp]').forEach(link => {
+    link.href = `https://wa.me/${config.whatsapp}?text=${encodeURIComponent(config.message)}`;
+  });
+}
 const menuButton = document.querySelector('.menu-toggle');
 const nav = document.querySelector('#navigation');
-function closeMenu() {
+function closeMenu(returnFocus = false) {
+  const wasOpen = menuButton?.getAttribute('aria-expanded') === 'true';
   menuButton?.setAttribute('aria-expanded', 'false');
   menuButton?.setAttribute('aria-label', 'Abrir menu');
   nav?.classList.remove('open');
+  if (wasOpen && returnFocus) menuButton.focus({ preventScroll: true });
 }
 menuButton?.addEventListener('click', () => {
   const open = menuButton.getAttribute('aria-expanded') !== 'true';
@@ -16,8 +20,20 @@ menuButton?.addEventListener('click', () => {
   menuButton.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
   nav.classList.toggle('open', open);
 });
-nav?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
-document.addEventListener('keydown', event => { if (event.key === 'Escape') { closeMenu(); } });
+nav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => closeMenu()));
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') closeMenu(true);
+});
+document.addEventListener('click', event => {
+  if (!nav?.contains(event.target) && !menuButton?.contains(event.target)) {
+    closeMenu(nav?.contains(document.activeElement));
+  }
+});
+document.addEventListener('focusin', event => {
+  if (!nav?.contains(event.target) && !menuButton?.contains(event.target)) closeMenu();
+});
+window.matchMedia('(max-width: 760px)').addEventListener('change', () => closeMenu());
+if (menuButton && nav) menuButton.closest('.header')?.classList.add('has-menu');
 document.querySelector('#year')?.replaceChildren(String(new Date().getFullYear()));
 // Conteúdo visível por padrão: animações são um aprimoramento opcional.
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
